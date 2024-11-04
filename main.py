@@ -32,7 +32,7 @@ class ChickenFarmSimulator:
         self.stats_label = tk.Label(self.root, text="", font=("Arial", 12, "bold"), bg="#f0f8ff")
         self.stats_label.grid(row=0, column=0, columnspan=2, pady=10)
 
-        # Buttons for player actions with appealing colors and fonts
+        # Buttons for player actions 
         button_style = {"font": ("Arial", 10, "bold"), "bg": "#87ceeb", "fg": "white", "width": 20, "height": 2}
 
         self.plant_grass_button = tk.Button(self.root, text="Plant Grass (R5)", command=self.plant_grass, **button_style)
@@ -50,7 +50,7 @@ class ChickenFarmSimulator:
         self.sell_eggs_button = tk.Button(self.root, text="Sell Eggs", command=self.sell_eggs, **button_style)
         self.sell_eggs_button.grid(row=3, column=0, padx=5, pady=5)
 
-        # Entry field and label for wolf attack challenge with enhanced styles
+        # Entry field and label for wolf attack challenge 
         self.wolf_attack_label = tk.Label(self.root, text="", font=("Arial", 11, "italic"), bg="#f0f8ff", fg="red")
         self.wolf_attack_label.grid(row=4, column=0, columnspan=2, pady=5)
         
@@ -129,7 +129,7 @@ class ChickenFarmSimulator:
 
         # End game if no chickens remain
         if self.chickens == 0:
-            self.end_game("All chickens are gone.")
+            self.end_game("No chicken left!.")
             return
 
     def end_game(self, reason):
